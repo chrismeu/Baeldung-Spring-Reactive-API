@@ -1,6 +1,6 @@
 package com.baeldung.baeldungspringreactiveapi.webclient;
 
-import com.baeldung.baeldungspringreactiveapi.VO.Foo;
+import com.baeldung.baeldungspringreactiveapi.data.VO.Foo;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
 
@@ -22,7 +22,9 @@ public class FooWebClient {
                 .retrieve()
                 .bodyToFlux(Foo.class);
 
-        fooFlux.subscribe(System.out::println);
+        fooFlux
+                .log().subscribe();
+                //.subscribe(System.out::println);
     }
 
 }

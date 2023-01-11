@@ -1,4 +1,4 @@
-package com.baeldung.baeldungspringreactiveapi.VO;
+package com.baeldung.baeldungspringreactiveapi.data.VO;
 
 /**
  * Foo (VO)
@@ -7,7 +7,7 @@ package com.baeldung.baeldungspringreactiveapi.VO;
  */
 public class Foo {
 
-    private long ID;
+    private String ID;
     private String name;
 
     /**
@@ -21,16 +21,16 @@ public class Foo {
      * @param ID
      * @param name
      */
-    public Foo(long ID, String name) {
+    public Foo(String ID, String name) {
         this.ID = ID;
         this.name = name;
     }
 
-    public long getID() {
+    public String getID() {
         return ID;
     }
 
-    public void setID(long ID) {
+    public void setID(String ID) {
         this.ID = ID;
     }
 
